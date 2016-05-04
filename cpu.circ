@@ -108,32 +108,32 @@ e3a01003 e3a02004 e0810002 eafffffe
     <a name="clabel" val=""/>
     <a name="clabelup" val="south"/>
     <a name="clabelfont" val="DejaVu Sans Mono plain 12"/>
+    <wire from="(10,760)" to="(10,830)"/>
     <wire from="(270,770)" to="(320,770)"/>
+    <wire from="(940,680)" to="(940,710)"/>
+    <wire from="(520,830)" to="(750,830)"/>
     <wire from="(10,760)" to="(50,760)"/>
     <wire from="(490,1140)" to="(600,1140)"/>
+    <wire from="(10,830)" to="(490,830)"/>
     <wire from="(680,580)" to="(680,620)"/>
     <wire from="(740,710)" to="(740,820)"/>
+    <wire from="(750,670)" to="(750,830)"/>
     <wire from="(730,630)" to="(950,630)"/>
     <wire from="(580,760)" to="(580,820)"/>
     <wire from="(40,780)" to="(50,780)"/>
-    <wire from="(830,690)" to="(840,690)"/>
-    <wire from="(880,680)" to="(890,680)"/>
     <wire from="(310,1140)" to="(380,1140)"/>
-    <wire from="(520,810)" to="(520,820)"/>
-    <wire from="(520,820)" to="(580,820)"/>
-    <wire from="(500,830)" to="(500,840)"/>
     <wire from="(560,780)" to="(600,780)"/>
-    <wire from="(890,680)" to="(890,710)"/>
     <wire from="(90,770)" to="(130,770)"/>
-    <wire from="(730,670)" to="(840,670)"/>
     <wire from="(180,810)" to="(180,840)"/>
-    <wire from="(10,820)" to="(490,820)"/>
-    <wire from="(740,710)" to="(890,710)"/>
+    <wire from="(870,690)" to="(890,690)"/>
     <wire from="(650,580)" to="(650,620)"/>
     <wire from="(580,760)" to="(600,760)"/>
+    <wire from="(730,670)" to="(750,670)"/>
     <wire from="(580,820)" to="(740,820)"/>
     <wire from="(150,1140)" to="(230,1140)"/>
-    <wire from="(10,760)" to="(10,820)"/>
+    <wire from="(740,710)" to="(940,710)"/>
+    <wire from="(930,680)" to="(940,680)"/>
+    <wire from="(750,670)" to="(890,670)"/>
     <comp lib="0" loc="(500,840)" name="Constant">
       <a name="facing" val="north"/>
       <a name="width" val="2"/>
@@ -145,11 +145,16 @@ e3a01003 e3a02004 e0810002 eafffffe
     <comp loc="(730,630)" name="register-file">
       <a name="label" val="REG FILE"/>
     </comp>
-    <comp lib="3" loc="(880,680)" name="Adder">
+    <comp lib="2" loc="(490,830)" name="BitSelector">
+      <a name="facing" val="west"/>
       <a name="width" val="32"/>
+      <a name="group" val="8"/>
     </comp>
     <comp lib="0" loc="(230,1140)" name="Tunnel">
       <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="3" loc="(930,680)" name="Adder">
+      <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(680,580)" name="Tunnel">
       <a name="facing" val="south"/>
@@ -174,19 +179,10 @@ e3a01003 e3a02004 e0810002 eafffffe
     <comp loc="(1030,650)" name="alu">
       <a name="label" val="ALU"/>
     </comp>
-    <comp lib="2" loc="(490,820)" name="BitSelector">
-      <a name="facing" val="west"/>
-      <a name="width" val="32"/>
-      <a name="group" val="8"/>
-    </comp>
     <comp lib="0" loc="(150,1140)" name="Clock"/>
     <comp lib="0" loc="(320,770)" name="Splitter">
       <a name="fanout" val="32"/>
       <a name="incoming" val="32"/>
-    </comp>
-    <comp lib="0" loc="(830,690)" name="Constant">
-      <a name="width" val="32"/>
-      <a name="value" val="0x4"/>
     </comp>
     <comp lib="0" loc="(560,780)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -198,6 +194,10 @@ e3a01003 e3a02004 e0810002 eafffffe
     </comp>
     <comp lib="0" loc="(600,1140)" name="Tunnel">
       <a name="label" val="PC WE"/>
+    </comp>
+    <comp lib="0" loc="(870,690)" name="Constant">
+      <a name="width" val="32"/>
+      <a name="value" val="0x4"/>
     </comp>
     <comp lib="0" loc="(380,1140)" name="Tunnel">
       <a name="label" val="CLR"/>
