@@ -424,7 +424,9 @@ e3a01003 e3a02004 e0810002 eafffffe
     <comp lib="4" loc="(270,770)" name="ROM">
       <a name="dataWidth" val="32"/>
       <a name="contents">addr/data: 8 32
-e3a01003 e3a02004 e0810002 eafffffe
+e3a0d040 e3a00005 ebfffffe eafffffe e24dd004 e58de000 e24dd004 e58d0000
+e3500000 1a000001 e3a00001 ea000003 e2400001 ebfffffe e59d1000 e0000190
+e28dd004 e59de000 e28dd004 e12fff1e
 </a>
     </comp>
     <comp lib="0" loc="(960,600)" name="Tunnel">
